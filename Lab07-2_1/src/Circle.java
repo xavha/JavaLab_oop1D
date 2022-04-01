@@ -12,6 +12,11 @@ public class Circle  extends GeometricObject{
         this.radius = radius;
     }
 
+
+    public double getRadius() {
+        return this.radius;
+    }
+
     @Override
     public double getArea() {
         return Math.PI*(radius*radius);
@@ -21,7 +26,6 @@ public class Circle  extends GeometricObject{
     public double getPerimeter() {
         return Math.PI*2*radius;
     }
-
 
     @Override
     public String toString() {

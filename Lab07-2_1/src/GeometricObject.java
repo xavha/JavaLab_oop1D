@@ -1,7 +1,7 @@
 import java.util.Date;
 
 abstract class GeometricObject {
-    private String color;
+    private String color,display;
     private boolean filled;
     private Date dateCreated;
 
@@ -30,6 +30,27 @@ abstract class GeometricObject {
 
     public Date getDateCreated() {
         return this.dateCreated;
+    }
+
+    public String displayObject(Object object){
+        display = "Color : " + this.getColor() +
+        "\nisFilled : " + this.isFilled();
+        if(object instanceof Circle){
+            return  display + "\nArea : " + ((Circle)object).getArea() + 
+            "\nPerimeter : " + ((Circle)object).getPerimeter() +
+            "\nDiameter : " + ((Circle)object).getRadius()*2;
+        }
+        else if(object instanceof Triangle){
+            return display + "\nArea : " + ((Triangle)object).getArea() + 
+            "\nPerimeter : " + ((Triangle)object).getPerimeter() +
+            "\nSide : " + ((Triangle)object).getSide1() + " , " + 
+            ((Triangle)object).getSide2() + " , " + ((Triangle)object).getSide3();            
+        }
+        else if(object instanceof Rectangle){
+            return display + "\nWidth : "+ ((Rectangle)object).getWidth() +
+                    "\nHeight : "+ ((Rectangle)object).getHeight();
+        }
+        else return "";
     }
 
     @Override

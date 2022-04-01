@@ -25,6 +25,16 @@ public class App {
         System.out.println();
         System.out.println(triangle);
 
+        Circle circle = new Circle(7,"blue",false);
+        System.out.println(circle.displayObject(circle));
+        System.out.println();
+
+        System.out.println(triangle.displayObject(triangle));
+        System.out.println();
+
+        Rectangle rectangle = new Rectangle(34, 12, "yellow", true);
+        System.out.println(rectangle.displayObject(rectangle));
+
         ip.close();
         ipstring.close();
     }

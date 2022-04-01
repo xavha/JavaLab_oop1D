@@ -13,6 +13,19 @@ public class Triangle extends GeometricObject {
         this.side3 = side3;
     }
 
+
+    public double getSide1() {
+        return this.side1;
+    }
+
+    public double getSide2() {
+        return this.side2;
+    }
+
+    public double getSide3() {
+        return this.side3;
+    }
+
     @Override
     public double getArea() {
         this.s = (side1+side2+side3)/2;
