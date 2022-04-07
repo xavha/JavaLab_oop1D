@@ -1,1 +1,1 @@
-# Java_oop_lab1D
+# JavaLab_oop1D
