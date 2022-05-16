@@ -18,5 +18,6 @@ public class App {
 
         System.out.println("COMPARE OCTAGON");
         compare(octagon1.compareTo(octagon2));
+        
     }
 }
