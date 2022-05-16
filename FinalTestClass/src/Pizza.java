@@ -18,6 +18,18 @@ public class Pizza extends Food implements CaloriesCalculator {
         this.gramsOfFat = gramsOfFat;
     }
 
+    public void setGramsOfProtein(int gramsOfProtein) {
+        this.gramsOfProtein = gramsOfProtein;
+    }
+
+    public void setGramsOfCarb(int gramsOfCarb) {
+        this.gramsOfCarb = gramsOfCarb;
+    }
+
+    public void setGramsOfFat(int gramsOfFat) {
+        this.gramsOfFat = gramsOfFat;
+    }
+
     @Override
     public String toString() {
         return  super.toString() +
