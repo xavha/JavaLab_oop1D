@@ -1,4 +1,4 @@
-public class Food {
+public abstract class Food {
     private String name;
     private int price;
     private int quantity;
@@ -6,6 +6,10 @@ public class Food {
 
     protected Food(){
 
+    }
+
+    protected Food(int quantity){
+        this.quantity = quantity;
     }
 
     protected Food(String name,boolean isVegetarian,int price,int quantity){
@@ -31,12 +35,12 @@ public class Food {
         this.price = price;
     }
 
-    public boolean isIsHealthy() {
+    public boolean isIsVegetarian() {
         return this.isVegetarian;
     }
 
-    public void setIsHealthy(boolean isHealthy) {
-        this.isVegetarian = isHealthy;
+    public void setIsVegetarian(boolean isVegetarian) {
+        this.isVegetarian = isVegetarian;
     }
 
     public int getQuantity() {
@@ -54,8 +58,6 @@ public class Food {
                  ;
     }
 
-    public int getTotalPrice(){
-        return this.price*this.quantity;
-    }
+    public abstract int getTotalPrice();
 
 }
